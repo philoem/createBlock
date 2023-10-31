@@ -15,7 +15,7 @@ describe("Blockchain Tests", () => {
         console.log('result2 :>> ', result);
         chai_1.assert.equal(result, '0000');
     });
-    it("test", () => {
+    it("Find nonce to begin with '0000''s hash ", () => {
         const newNonce = new designBlockchain_js_1.designBlockchain(1, 0, '');
         const resultNonce = newNonce.hashWith4Zeros();
         const newDesignBlockchain = new designBlockchain_js_1.designBlockchain(1, resultNonce, '');

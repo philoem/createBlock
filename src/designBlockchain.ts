@@ -1,4 +1,3 @@
-// import CryptoJS from 'crypto-js';
 import sha256 from 'crypto-js/sha256';
 
 type dataType = {

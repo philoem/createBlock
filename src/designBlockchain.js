@@ -4,7 +4,6 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.designBlockchain = void 0;
-// import CryptoJS from 'crypto-js';
 const sha256_1 = __importDefault(require("crypto-js/sha256"));
 class designBlockchain {
     static calculateHash(arg0) {
