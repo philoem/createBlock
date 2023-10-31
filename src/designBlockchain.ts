@@ -13,18 +13,16 @@ export class designBlockchain {
   }
   block: number;
   nonce: number;
-  data: dataType;
-  prevHash: string;
+  data: string;
 
-  constructor(block: number, nonce: number, data: dataType, prevHash: string) {
+  constructor(block: number, nonce: number, data: string) {
     this.block = block;
     this.nonce = nonce;
     this.data = data;
-    this.prevHash = prevHash;
   }
 
-  public calculateHash(block: number, nonce: number, data: dataType, prevHash: string ) {
-    return sha256(block + prevHash  + data + nonce).toString()
+  public calculateHash(block: number, nonce: number, data: string ) {
+    return sha256(block.toString() + nonce.toString()  + data).toString()
   }
 
 }

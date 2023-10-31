@@ -10,15 +10,13 @@ class designBlockchain {
     static calculateHash(arg0) {
         throw new Error('Method not implemented.');
     }
-    constructor(block, nonce, data, prevHash) {
+    constructor(block, nonce, data) {
         this.block = block;
         this.nonce = nonce;
         this.data = data;
-        this.prevHash = prevHash;
-        console.log('thisblock :>> ', this.block);
     }
-    calculateHash(block, nonce, data, prevHash) {
-        return (0, sha256_1.default)(block + prevHash + data + nonce).toString();
+    calculateHash(block, nonce, data) {
+        return (0, sha256_1.default)(block.toString() + nonce.toString() + data).toString();
     }
 }
 exports.designBlockchain = designBlockchain;

@@ -4,7 +4,7 @@
   "description": "Design a blockchain based on Typescript",
   "main": "index.js",
   "scripts": {
-    "test": "mocha",
+    "test": "tsc && mocha",
     "build": "tsc"
   },
   "repository": {
