@@ -18,5 +18,14 @@ class designBlockchain {
     calculateHash(block, nonce, data) {
         return (0, sha256_1.default)(block.toString() + nonce.toString() + data).toString();
     }
+    hashWith4Zeros() {
+        let block = 1;
+        let nonce = 0;
+        let data = '';
+        while (!this.calculateHash(block, nonce, data).startsWith('0000')) {
+            nonce++;
+        }
+        return nonce;
+    }
 }
 exports.designBlockchain = designBlockchain;

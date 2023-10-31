@@ -15,4 +15,13 @@ describe("Blockchain Tests", () => {
         console.log('result2 :>> ', result);
         chai_1.assert.equal(result, '0000');
     });
+    it("test", () => {
+        const newNonce = new designBlockchain_js_1.designBlockchain(1, 0, '');
+        const resultNonce = newNonce.hashWith4Zeros();
+        const newDesignBlockchain = new designBlockchain_js_1.designBlockchain(1, resultNonce, '');
+        const result = newDesignBlockchain.calculateHash(1, resultNonce, '').toString().substring(0, 4);
+        console.log('resultNonce :>> ', resultNonce);
+        console.log('result3 :>> ', result);
+        chai_1.assert.equal(result, '0000');
+    });
 });
